@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Tang <span>Designs</span></span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="100">
+                    <a href="#About" aria-label="About">About</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="200">
+                    <a href="#Skills" aria-label="Skills">Skills</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                    <a href="#Services" aria-label="Services">Services</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1600" data-aos-delay="400">
+                    <a href="#Contact" aria-label="Contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#Skills">Skills</a>
+                <a href="#Services">Services</a>
+                <a href="#Portfolio">Portfolio</a>
+                <a href="#Contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel ()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="main-container">
+            <!-- Image container -->
+            <div class="image" data-aos="zoom-in" data-aos-duration="3000">
+                <img src="images/DTG-small.svg" alt="Me">
+            </div>
+    
+            <!-- Content container -->
+            <div class="content">
+                <h1>Hello! I'm Diana</h1>
+                <div class="typewriter" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">
+                    <span class="typewriter-text"></span><label for="">|</label>
+                </div>
+                <h2>Welcome to my Portfolio Website</h2>
+                <p>Based in the Niagara Region, I seamlessly blend artistic creativity with technical expertise to craft compelling visual narratives. I look forward to working with everyone.</p>
+    
+                <!-- Social links -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/tang_graphics17/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/Dianatang17" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/services/page/768b653323619260bb/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section Start -->
+    <section class="skills" id="Skills"> <!-- Use lowercase for section classes -->
+        <div class="content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic">Skills Reflecting Our Knowledge</div>
+                    <p data-aos="fade-right">"When Love and Skill work together, expect a masterpiece." - John Ruskin</p>
+                    <div class="experience">
+                        <div class="num">6</div>
+                        <div class="exp">
+                            Years of Experience<br/>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">Adobe Creative Cloud</div>
+                        <div class="per">95%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Brand Collaterals </div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Prototyping </div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Microsoft Software</div>
+                        <div class="per">86%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Figma</div>
+                        <div class="per">85%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">HTML/CSS & JavaScript</div>
+                        <div class="per">80%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Traditional Media</div>
+                        <div class="per">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section Start -->
+    <section class="services" id="Services"> <!-- Corrected case for 'services' -->
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes">
+                  <div class="box">
+                    <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="topic">Graphic Design</div>
+                    <p>Boost your brand with our graphic design services. We create stunning visuals, from logos to social media graphics, that captivate and communicate effectively.</p>
+                </div>
+                
+               <div class="box">
+                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="topic">Brand Identity</div>
+                    <p>Design and build user-friendly applications for iOS and Android, ensuring a seamless experience that connects you with your audience.</p>
+                </div>  
+                
+                <div class="box">
+                    <div class="icon"><i class="fas fa-desktop"></i></div>
+                    <div class="topic">Website Designer</div>
+                    <p>Transform your online presence with my web design services. Creating visually stunning and user-friendly websites tailored to your brand’s unique identity.</p>
+                </div>
+             
+                 <div class="box">
+                    <div class="icon"><i class="fas fa-box"></i></div>
+                    <div class="topic">Package Design</div>
+                    <p>Enhance your product's appeal with our package design services. Creating eye-catching packaging that protects your product and reinforces your brand identity.</p>
+                </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="topic">Digital Marketing</div>
+                    <p>Maximize your online impact with digital marketing services. I offer social media, and content strategies that drive traffic and boost conversions.</p>
+                </div>
+               
+                <div class="box">
+                    <div class="icon"><i class="fas fa-camera"></i></div>
+                    <div class="topic">Photography</div>
+                    <p>Capture your most cherished moments with professional, high-quality photography. Specializing in vibrant, timeless images that tell your unique story.</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fas fa-tablet-alt"></i></div>
+                    <div class="topic">App Development</div>
+                    <p>Design and build user-friendly applications for iOS and Android, ensuring a seamless experience that connects you with your audience.</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                      <div class="topic"> Collaborating </div>
+                     <p>By working closely with clients, fellow designers, and other professionals, I craft cohesive visual identities that align with project goals. These collaborations foster creativity, ensuring every design reflects a shared vision and pushes creative boundaries.</p>
+                </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fas fa-drafting-compass"></i></div>
+                      <div class="topic"> Mockup Designs </div>
+                     <p> Mockups showcase realistic representations of websites, apps, branding materials, and products, allowing you to see the final look and feel. Whether it's for presentations, client pitches, or refining design elements, our mockups help communicate your vision clearly and effectively.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  <!-- MY PORTFOLIO -->
+   
+  <section class="services" id="Portfolio">
+    <div class="content">
+        <div class="title"><span>My Portfolio</span></div>
+
+        <div class="portfolio-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="images/assets/projects/LOD/LOD.png" >
+                    <h3>The League of Champions 2024</h3>
+                   <p>  Welcome to The League of Champions, where athletes of all skill levels unite to showcase their talent and passion for basketball. Join us for thrilling competition, teamwork, and the pursuit of glory on the court! </p>                
+                </div>
+                <div class="carousel-slide active">
+                    <img src="images/assets/projects/LOD/phantom_poodles.png" >
+                    <h3>The League of Champions - The Phantom Poodles 2024</h3>
+                    <p> Welcome to the world of the Phantom Poodles, where agility meets elegance! The Phantoms embody the spirit of teamwork, grace, and determination. With our paws on the court, we dance through challenges with style and finesse. Get ready to witness the magic of the Phantom Poodles in action!</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/rat_attacks.png" >
+                    <h3>The League of Champions - The Rat Attacks 2024</h3>
+                    <p>Get ready to feel the sting of the Rat Attacks! We may be small, but our bite is mighty. With speed, agility, and a whole lot of heart, we're here to dominate the court. Watch out, because when the Rat Attacks, victory is inevitable!</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/funky_duckies.png" >
+                    <h3>The League of Champions - The Funky Duckies 2024</h3>
+                    <p>Quack, quack! Get ready to groove with the Funky Duckies! We may waddle, but on the court, we glide. With style, flair, and a whole lot of attitude, we're here to dazzle and dominate. When the Funky Duckies hit the scene, the competition better watch out!</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/royal_serpents.png" >
+                    <h3>The League of Champions - Royal Serpents 2024</h3>
+                    <p> Slithering onto the court with venomous skill and regal flair, the Royal Serpents are poised to strike fear into the hearts of their opponents. With precision, speed, and a deadly bite, this team is ready to coil around victory and claim their rightful throne. When the Royal Serpents strike, the competition will feel defeated!</p>
+                </div>
+               
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/humber_fumbldinks.png" >
+                    <h3>The League of Champions - The Humber Fumbldinks 2024</h3>
+                    <p>Saddle up for the Humber Fumbldinks, galloping onto the field with power and grace. With hooves of thunder and hearts of champions, we're here to trot our way to victory. When the Humber Fumbldinks stampede in, the competition better hold onto their reins!</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/blooming_rosies.png" >
+                    <h3>The League of Champions - The Blooming Rosies 2024</h3>
+                    <p> Blossoming onto the court with grace and charm, The Blooming Rosies are set to captivate with their elegance and finesse. With petals of determination and stems of strength, this team is ready to bloom into victory. When The Blooming Rosies shine, their floral prowess mesmerizes their opponents!</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/defiant_dragons.png" >
+                    <h3>The League of Champions - The Defiant Dragons</h3>
+                    <p> Roaring onto the court with fiery determination and mystical prowess, the Defiant Dragons are a force to be reckoned with. With steel scales, wings of resilience, and hearts of fire, this team breathes defiance into every game. When the Defiant Dragons take flight, the opposition will witness the power of legends in the making!</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/LOD/the_otters.png" >
+                    <h3>The League of Champions - The Otters 2024</h3>
+                    <p> Diving into the game with precision and fluidity, The Otters glide across the court with a synchronized rhythm that mesmerizes their rivals. Their strategic plays flow like a river, swift and unstoppable, as they outmaneuver and outsmart their opponents with a finesse that echoes the graceful nature of their namesake. Get ready to witness a team that embodies unity, agility, and unwavering determination. The Otters are here to conquer the basketball realm! </p>
+                </div>
+            </div>
+        </div>
+
+      <!-- Siamese Cafe -->
+      <div class="portfolio-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand1.png" >
+                <h3> Brand Identity Passion Project, March 2025 </h3>                
+            </div>
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand2.png" >
+                    <h3> Brand Identity Passion Project, March 2025</h3>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand3.png" >
+                    <h3> Brand Identity Passion Project, March 2025</h3>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand4.png" >
+                    <h3> Brand Identity Passion Project, March 2025</h3>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand5.png" >
+                    <h3> Brand Identity Passion Project, March 2025</h3>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/assets/projects/Siamese_Cafe/SB_Brand6.png" >
+                    <h3> Brand Identity Passion Project, March 2025</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+    <!-- MY Contact -->
+         <section class="contact" id="Contact">
+        <div class="title"><span> Contact</span></div>
+
+            <!-- Image container -->
+            <div class="contact-photo-container" data-aos="zoom-in" data-aos-duration="3000">
+                <img src="images/main.jpg" alt="Me" class="contact-photo">
+            </div>
+            <div class="text">
+                <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
+            </div>
+
+                 <!-- Social links -->
+                 <div class="social-links">
+                    <a href="https://www.instagram.com/tang_graphics17/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/Dianatang17" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/services/page/768b653323619260bb/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <form action="https://formspree.io/f/xgvwgqye" method="post" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+        </section>
+
+            
+    <!-- Footer Section Starts -->
+    <footer>
+        <div class="text">
+            <span>All Designs Are Created By <a href="#">Diana Tang</a> &#169; | 2025 All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset: 0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

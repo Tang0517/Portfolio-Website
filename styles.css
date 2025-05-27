@@ -1,0 +1,908 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #dddddd; /* Added missing semicolon */
+  overflow-x: hidden;
+}
+
+/* CUSTOM SCROLL BAR CSS */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar track {
+    background-color:#2E1C2B; /* Optional: change color for visibility */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cbcbcb; /* Optional: change color for visibility */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:#959595; /* Optional: change color for visibility */
+}
+/* NAVIGATION BAR STYLES */
+nav{
+  width: 100%;
+  height: 10vh;
+  background-color: #cac8c888;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: auto; 
+    align-items: center;
+}
+.nav-container .links {
+    display: flex;
+}
+
+.logo{
+    color: rgb(171, 171, 171);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #893168;
+    text-shadow: 0 0 10px #2e1c2b65 ;
+    padding: 15px;
+}
+
+.hamburg, 
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    color: #893168;
+    font-size: clamp(1.5rem, 0.5rem + 2vw, 3rem);
+    display:flex /* Hide close button initially */
+    pointer-events none;
+
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: #2E1C2B;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a:before {
+    position: absolute;
+    content:"";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.2s linear;
+}
+.nav-container .links a:before {
+   width: 100;
+}
+
+.nav-container .links a:hover{
+    color: #893168;
+    border-bottom: 2.75px solid #2E1C2B;
+}
+
+.dropdown {
+    z-index: 100; 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: translateY(-500px);
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.522);
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #cccaca;
+}
+section{
+    width: 100%;
+    min-height: 90vh;
+}
+
+ section .main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 20px 100px; /* Add some padding around the container */
+ }
+
+ /* THE COLOUMN FOR IMAGE AND INTRO*/
+ .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-container .image {
+    width: 500px; /* Adjust size as needed */
+    height: 500px; /* Adjust height as needed */
+    border-radius: 70%; /* Circle image */
+    overflow: hidden;
+    box-shadow: 0 0 50px #2E1C2B;
+    margin-right: 20px; /* Space between image and text */
+    display: flex; /* Centering image */
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2.5em auto; /* Centering the image container */
+}
+
+.main-container .image img {
+    width: 100%; /* Ensure image fills the container */
+    height:100%; /* Maintain aspect ratio */
+}
+
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out infinite; /* Animation on hover */
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slight zoom */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.main-container .content {
+    flex: 1; /* Ensure the content container takes up 1 part of the row */;
+    color: #000000;
+    width: 50%; /* Ensure content takes 50% of the width */
+    padding-left: 20px; /* Space between image and content */
+    text-align: left; /* Align the text on the left */
+}
+
+.main-container .content h1, .main-container .content h2, .main-container .content p {
+    margin: 0 0 15px 0; /* Space between heading and paragraph */
+    font-size: 1.2em; /* Adjust text size */
+}
+
+.content .typewriter .text {
+    color: #893168; /* Text color */
+    text-shadow: 0 0 10px #2E1C2B; /* Text shadow for typewriter effect */
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem); /* Responsive paragraph font size */
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center; /* Center align for smaller screens */
+    }
+
+    .main-container .image, .main-container .content {
+        width: 100%; /* Full width for image and content */
+        max-width: none; /* Disable max-width on smaller screens */
+    }
+
+    .main-container .content {
+        text-align: center; /* Center the text on smaller screens */
+        padding-left: 0; /* Remove left padding */
+    }
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #893168;
+    border-radius: 50%;
+    color: #893168;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    transform: scale(1.3);
+    color: #893168;
+    background-color: #EAEAEA; 
+    filter: drop-shadow(0 0 10px #2E1C2B);
+    
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #EAEAEA;
+    color: #050404;
+    border:none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: #2E1C2B;
+    border: 2px solid #2E1C2B;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px  #2E1C2B;
+}
+
+/* About Section */
+    section.content {
+    width:80%;
+    margin: 0px auto;
+    font-family:'Poppins', sans-serif;
+}
+
+.about about-details{
+    display: flex;
+    justify-content:space-between;
+    align-items:center; 
+}
+
+section .title {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 40px;
+}
+
+section .title span{
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    position:relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before,
+section.title span:after{
+    content:"";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #2E1C2B;
+    left: 0%;
+    bottom: 0%;
+}
+
+section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details.left{
+    width: 45%;
+}
+
+.about .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details.right {
+    width: 55%;
+}
+
+section .topic{
+    color: #000000;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details.right p{
+    text-align: justify;
+    color: #000;
+}
+
+section .button{
+    margin: 16px 0;
+}
+
+section .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: #2E1C2B;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button :hover{
+    border-color:#2E1C2B;
+    background-color:#cccaca;
+    border: 2px solid transparent;
+}
+
+/* Skills Section */
+.skills {
+    background: #89316768;
+    padding: 40px 0;
+}
+
+.skills .skills-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Add space between the skill boxes */
+}
+
+.skills-details .text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; /* Space below the text */
+}
+
+.skills-details .experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.skills-details .experience .num {
+    font-size: 60px; /* Reduced font size */
+    color: #2E1C2B;
+    margin-right: 15px; /* Increased space between number and text */
+}
+
+.skills-details .experience .exp {
+    color: #000;
+    margin-left: 20px; /* Keep this for additional space */
+    font-size: 30px; /* Reduced font size */
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+/* Added spacing around the experience section */
+.skills-details .experience-container {
+    margin: 20px 0; /* Space above and below experience items */
+    padding: 20px; /* Padding for the container */
+}
+
+/* Updated boxes styling */
+.skills-details .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between the skill boxes */
+    width: 100%;
+}
+
+.skills-details .box {
+    width: calc(22% - 20px); /* Smaller width for each card (4 cards per row) */
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    border-radius: 10px; /* Slightly smaller border radius */
+    box-shadow: 0 5px 10px #2e1c2b38;
+    transition: all 0.4s ease;
+    background-color: #f4f4f4;
+    height: 200px; /* Set a fixed height for all boxes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced well inside */
+}
+
+.skills-details .box:hover {
+    background: #b0afaf;
+    color: #893168;
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.skills-details .box .topic {
+    font-size: 22px; /* Reduced font size */
+    color: #2E1C2B;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ensures long text doesn't break the layout */
+}
+
+.skills-details .box .per {
+    font-size: 50px; /* Reduced font size */
+    color: #2E1C2B;
+}
+
+
+@media (max-width: 900px) {
+    .skills-details .box {
+        width: calc(33.333% - 20px); /* 3 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-details .box {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .skills-details .box {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 40px 0;
+    max-width: 1600px; /* Limit the width of the services section */
+    margin: 0 auto; /* Center the services section */
+}
+
+.services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between the cards */
+    margin-bottom: 50px; /* Adds space between the services and the footer */
+}
+
+.services .boxes .box {
+    width: calc(33.333% - 20px); /* Three cards per row */
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px #2e1c2b38;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color: #f4f4f4; /* Light background for the cards */
+}
+
+.services .boxes .box:hover {
+    background: #b0afaf;
+    color: #893168;
+    transform: translateY(-5px); /* Add subtle hover effect */
+}
+
+.services .boxes .box .icon {
+    height: 70px;
+    width: 70px;
+    background: #893168;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+    color: #fff; /* Icon color to white */
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover .icon {
+    background-color: #893168;
+    color: #cacaca;
+}
+
+.services .boxes .box .topic,
+.services .boxes .box p {
+    color: #2E1C2B;
+    margin: 10px 0;
+}
+
+@media (max-width: 900px) {
+    .services .boxes .box {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .services .boxes .box {
+        width: 100%; /* One card per row on very small screens */
+    }
+}
+
+.boxes.box:hover.icon{
+    background-color: #893168;
+    color: #b0afaf;
+}
+
+.services.boxes.box:hover.topic,
+.services.boxes.box:hover p{
+    color: #000000;
+    transition: all 0.4s ease;
+}
+
+.services.boxes.box:hover.topic,
+.services.boxes.box:hover p{
+    color: #000000;
+}
+
+/* PORTFOLIO STYLING*/
+.portfolio {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.portfolio-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 40px; /* Increased bottom padding */
+}
+
+.portfolio-carousel {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;      /* Center the content vertically */
+    position: relative;
+    max-height: 1000px;
+    max-width: 1268px;        /* Set a max width */
+    margin-bottom: 40px; /* Increased bottom margin */
+    overflow-x: auto;
+    gap: 20px;
+    border: 4px solid #4a1942; /* Optional border */
+    border-radius: 10px;      /* Optional rounded corners */
+    margin-right: auto;       /* Center the container */
+    margin-left: auto;        /* Center the container */
+}
+
+.carousel-container {
+    flex: 0, 0, auto;
+    display: flex;
+    transition: transform 3s ease-in-out; /* Smooth transition */
+    margin-right: 0;          /* Remove extra margin */
+    margin-left: 0;           /* Remove extra margin */
+    width: 100%;              /* Full width inside the portfolio-carousel */
+}
+
+.carousel-slide {
+    min-width: 100%;          /* Each slide takes full width */
+    box-sizing: border-box;    /* Include padding in width */
+    text-align: center;        /* Center text */
+    padding: 18px;             /* Add padding for better spacing */
+}
+
+.carousel-slide img {
+    width: 100%;               /* Responsive images */
+    border-radius: 10px 10px 0 0; /* Rounded corners for images */
+    padding-bottom: 20px; /* This is for the space between the photo and project header */
+}
+
+h3 {
+    margin-bottom: 18px; /* Added spacing below h3 */
+}
+
+.carousel-slide p {
+    margin: 0px, 20px; /* Margin for descriptions */
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-left: 18px;
+    padding-right: 18px;
+    word-wrap: break-word; /* Break long words properly */
+    text-align: center; /* Center align the text*/
+    margin: auto;
+    font-size: 16.5px;
+}
+
+
+
+
+/* THIS IS FOR SCREEN MINIMIZING*/
+
+@media (max-width: 1024px) {
+    /* Adjust styles for smaller screens, including MacBook Air */
+    .portfolio-carousel {
+        width: calc(100% - 60px); /* More space for smaller screens */
+    }
+
+    .carousel-slide h3 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .carousel-slide p {
+        font-size: 14px; /* Adjust description size */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjustments for tablets and smaller devices */
+    .portfolio-carousel {
+        width: calc(100% - 40px); /* Even more space */
+    }
+
+    .carousel-slide h3 {
+        font-size: 18px; /* Smaller heading */
+    }
+
+    .carousel-slide p {
+        font-size: 18px; /* Smaller description */
+    }
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center; /* Center-aligns the text */
+    padding: 40px 20px; /* Adds padding for better spacing */
+    background-color: #f8f8f8; /* Optional: Add a background color */
+}
+
+.contact-photo-container {
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.contact-photo {   
+    border-radius: 50%; /* Circle image */
+    width: 300px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure responsiveness */
+    border-radius: 50%; /* Optional: Makes the image circular */
+    display: block; /* Centers the image */
+    margin-left: auto; /* Centers the image */
+    margin-right: auto; /* Centers the image */
+}
+
+
+.contact .text {
+    margin-bottom: 20px; /* Space between text and social links */
+    font-size: 18px; /* Optional: Adjust font size */
+    color: #333; /* Optional: Set text color */
+}
+
+
+.social-links {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the links */
+    gap: 15px; /* Space between the icons */
+}
+
+.social-links a {
+    color: #333; /* Set a color for the icons */
+    font-size: 24px; /* Increase icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-links a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .social-links {
+        flex-direction: column; /* Stack the links vertically */
+        gap: 10px; /* Space between the stacked icons */
+    }
+}
+
+/* Optional: Contact Form Styles */
+.contact-form {
+    margin-top: 20px; /* Space above the form */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center align items */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%; /* Set a width for inputs */
+    margin: 10px 0; /* Space between inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.contact-form button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #893168; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.contact-form button:hover {
+    background-color: #2E1C2B; /* Darker shade on hover */
+}
+
+
+/*Footer*/
+
+footer {
+    background: #893168;
+    padding:15px 0;
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: #000;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: #000;
+}
+
+footer .text spana:hover{
+    text-decoration: underline;
+}
+
+.scroll button a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #000;
+    background-color: #893168;
+    padding: 7px 12px;;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: #000;
+    display:none;
+}
+
+@media (max-width: 1000px){
+    about.about-details{
+    justify-content: center;
+    flex-direction: Column;
+ }
+}
+.about .about-details.left{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.about-details.right{
+    width: 90%;
+    margin: 40px 0;
+}
+
+.services.boxes.box{
+    margin: 20px 0;
+    width: calc(100%/2-20px);
+}
+
+@media (max-width:900px){
+    .about .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width:968px){
+    nav .logo {
+    position:absolute;
+    }
+}
+    section .main-container {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg
+    .cancel{
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    .main-container .content{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+.social-links i{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    transform: none; /* Reset any transformations */
+}
+
+.main-container ,image{
+    z-index: -1;
+    width: 50%;
+    height: 60%;
+}
+
+.skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.services.boxes.box{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.contact .text{
+    width: 100%;
+}
+
+@media (max-width: 500px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+}
+
+.main-container .content{
+    width: 80%;
+}
+
+.main-container button{
+    margin-top: 15px;
+}
+
+.skills-details .boxes .per{
+    font-size: 50px;
+    color: #2E1C2B;
+}
+
